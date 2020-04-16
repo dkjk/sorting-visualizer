@@ -1,5 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/30a3b545-948f-4fb0-80a0-d618dc180430/deploy-status)](https://app.netlify.com/sites/dkjk-sorting-visualizer/deploys)
 
+[![dkjk](https://circleci.com/gh/dkjk/sorting-visualizer.svg?style=shield)](https://github.com/dkjk/sorting-visualizer)
+
 # Sorting Visualizer
 
 ## Pre-Requisites
