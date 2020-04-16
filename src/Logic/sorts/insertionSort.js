@@ -1,6 +1,6 @@
 import { swap } from '../helpers';
 
-export const insertionSort = unsortedArray => {
+export const insertionSort = (unsortedArray) => {
   const phases = [];
   let indexStart = 1;
   while (indexStart < unsortedArray.length) {
@@ -15,5 +15,6 @@ export const insertionSort = unsortedArray => {
     }
     indexStart++;
   }
+
   return phases;
 };

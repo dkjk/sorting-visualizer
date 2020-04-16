@@ -1,6 +1,6 @@
 import { swap } from '../helpers';
 
-export const bubbleSort = unsortedArray => {
+export const bubbleSort = (unsortedArray) => {
   let isSorted = false;
   let lastUnsorted = unsortedArray.length - 1;
   const phases = [];

@@ -56,3 +56,14 @@ module.exports = {
     historyApiFallback: true,
   },
 };
+
+// const paths = {
+//   APP_DIR: path.resolve(__dirname, '..', 'src'),
+// };
+
+// exports.resolveRoot = [paths.APP_DIR, 'node_modules'];
+
+// exports.aliases = {
+//   '@root': path.resolve(paths.APP_DIR, ''),
+//   '@components': path.resolve(paths.APP_DIR, 'components'),
+// };
