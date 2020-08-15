@@ -233,7 +233,13 @@ class Visualizer extends React.Component {
     try {
       values = JSON.parse(customPhase);
     } catch (e) {
-      values = customPhase.split(',');
+      const re = new RegExp(/[a-zA-Z!@#$%^&\-_<>]/);
+      if (!re.test(customPhase)) {
+        values = customPhase.split(',').map(val => parseInt(val));
+      } else {
+        alertMessage(MESSAGES.ONLY_NUMBERS);
+        return;
+      }
     }
 
     if (typeof values === 'string' || typeof values === 'number') {
@@ -253,14 +259,9 @@ class Visualizer extends React.Component {
 
     if (_.every(values, Number)) {
       this.setState({ currentPhase: values });
-      return;
+    } else {
+      alertMessage(MESSAGES.DEFAULT);
     }
-
-    if (typeof values === 'object') {
-      alertMessage(MESSAGES.ONLY_NUMBERS);
-    }
-
-    alertMessage(MESSAGES.DEFAULT);
   };
 
   render() {
